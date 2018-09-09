@@ -1,3 +1,7 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10' //we want gradle 2.10 to run this project
+}
+
 task helloWorld << {
    println 'Welcome to JCG Gradle Tutorial'
 }
