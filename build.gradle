@@ -5,8 +5,8 @@ task wrapper(type: Wrapper) {
 task(generateChangelogXml) {
     String inputFromJenkins = System.getenv('Kritika')
 println('VARIABLE_NAME = ' + inputFromJenkins)
-	new File("$projectDir/version.xml").text = "<XMLFILE>"+inputFromJenkins+"</<XMLFILE>"
-    
+	//new File("$projectDir/version.xml").text = "<XMLFILE>"+inputFromJenkins+"</XMLFILE>"
+    new File("$projectDir/version.xml").append ("\n<XMLFILE>"+inputFromJenkins+"</XMLFILE>")
     
 }
 
