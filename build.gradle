@@ -2,6 +2,14 @@ task wrapper(type: Wrapper) {
     gradleVersion = '4.10' //we want gradle 2.10 to run this project
 }
 
+task(generateChangelogXml) {
+    String inputFromJenkins = System.getenv('Kritika')
+println('VARIABLE_NAME = ' + inputFromJenkins)
+	new File("$projectDir/version.xml").text = "<XMLFILE>"+inputFromJenkins+"</<XMLFILE>"
+    
+    
+}
+
 task helloWorld << {
    println 'Welcome to JCG Gradle Tutorial'
    String inputFromJenkins = System.getenv('Kritika')
