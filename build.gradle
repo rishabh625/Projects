@@ -3,5 +3,7 @@ task wrapper(type: Wrapper) {
 }
 
 task helloWorld << {
-   println 'Welcome to JCG Gradle Tutorial' $Kritika
+   println 'Welcome to JCG Gradle Tutorial'
+   String inputFromJenkins = System.getenv('Kritika')
+println('VARIABLE_NAME = ' + inputFromJenkins)
 }
