@@ -3,5 +3,5 @@ task wrapper(type: Wrapper) {
 }
 
 task helloWorld << {
-   println 'Welcome to JCG Gradle Tutorial'
+   println 'Welcome to JCG Gradle Tutorial' $Kritika
 }
